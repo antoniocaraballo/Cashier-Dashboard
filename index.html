@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./css/main.css" />
+    <title>Cashier Dashboard</title>
+  </head>
+  <body class="bg-light">
+    <!-- Main Content -->
+    <div class="container my-4 d-flex">
+      <!-- Choose Order -->
+      <div class="col-8">
+        <h2 class="fw-light mb-5">
+          <span class="fw-semibold">Choose</span> Order
+        </h2>
+        <div class="d-flex gap-5 flex-wrap">
+          <div
+            class="bg-secondary p-4 rounded-4 d-flex flex-column align-items-center col-2 text-center"
+          >
+            <img
+              width="70px"
+              height="70px"
+              class="bg-primary rounded-circle p-2 mb-3"
+              src="./imgs/single-burger.png"
+              alt=""
+            />
+            <p class="mb-0">Single Burger</p>
+            <p value="2.99">$2.99</p>
+          </div>
+          <div
+            class="bg-secondary p-4 rounded-4 d-flex flex-column align-items-center col-2 text-center"
+          >
+            <img
+              width="70px"
+              height="70px"
+              class="bg-primary rounded-circle p-2 mb-3"
+              src="./imgs/double-burger.png"
+              alt=""
+            />
+            <p class="mb-0">Double Burger</p>
+            <p value="3.99">$3.99</p>
+          </div>
+          <div
+            class="bg-secondary p-4 rounded-4 d-flex flex-column align-items-center col-2 text-center"
+          >
+            <img
+              width="70px"
+              height="70px"
+              class="bg-primary rounded-circle p-2 mb-3"
+              src="./imgs/bacon-burger.png"
+              alt=""
+            />
+            <p class="mb-0">Bacon Burger</p>
+            <p value="3.99">$3.99</p>
+          </div>
+          <div
+            class="bg-secondary p-4 rounded-4 d-flex flex-column align-items-center col-2 text-center"
+          >
+            <img
+              width="70px"
+              height="70px"
+              class="bg-primary rounded-circle p-2 mb-3"
+              src="./imgs/bbq-burger.png"
+              alt=""
+            />
+            <p class="mb-0">BBQ Burger</p>
+            <p value="4.99">$4.99</p>
+          </div>
+          <div
+            class="bg-secondary p-4 rounded-4 d-flex flex-column align-items-center col-2 text-center"
+          >
+            <img
+              width="70px"
+              height="70px"
+              class="bg-primary rounded-circle p-2 mb-3"
+              src="./imgs/salad.png"
+              alt=""
+            />
+            <p class="mb-0">Salad</p>
+            <p value="7.99">$7.99</p>
+          </div>
+          <div
+            class="bg-secondary p-4 rounded-4 d-flex flex-column align-items-center col-2 text-center"
+          >
+            <img
+              width="70px"
+              height="70px"
+              class="bg-primary rounded-circle p-2 mb-3"
+              src="./imgs/wrap.png"
+              alt=""
+            />
+            <p class="mb-0">Wrap</p>
+            <p value="4.99">$4.99</p>
+          </div>
+          <div
+            class="bg-secondary p-4 rounded-4 d-flex flex-column align-items-center col-2 text-center"
+          >
+            <img
+              width="70px"
+              height="70px"
+              class="bg-primary rounded-circle p-2 mb-3"
+              src="./imgs/taco.png"
+              alt=""
+            />
+            <p class="mb-0">Taco</p>
+            <p value="4.99">$4.99</p>
+          </div>
+          <div
+            class="bg-secondary p-4 rounded-4 d-flex flex-column align-items-center col-2 text-center"
+          >
+            <img
+              width="70px"
+              height="70px"
+              class="bg-primary rounded-circle p-2 mb-3"
+              src="./imgs/nuggets.png"
+              alt=""
+            />
+            <p class="mb-0">Nuggets</p>
+            <p value="2.99">$2.99</p>
+          </div>
+        </div>
+      </div>
+      <!-- Cart -->
+      <div class="col-4 rounded-4 bg-white p-4 position-relative">
+        <h2 class="fw-light mb-5">
+          <span class="fw-semibold">Your</span> Order
+        </h2>
+        <div
+          class="ms-2 col-10 d-flex justify-content-between bottom-0 my-4 position-absolute"
+        >
+          <p>Total</p>
+          <p>0.00</p>
+        </div>
+      </div>
+    </div>
+    <!-- Pay Button -->
+    <div class="container d-flex justify-content-end">
+      <button class="btn btn-lg btn-secondary col-4">Pay</button>
+    </div>
+  </body>
+  <script src="./node_modules/bootstrap/dist/js/bootstrap.js"></script>
+</html>
