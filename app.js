@@ -2,19 +2,31 @@ let menuItems = document.querySelectorAll(".item");
 
 let cart = document.querySelector("#cart");
 
-for (var i = 0; i < menuItems.length; i++) {
-  let item = menuItems[i];
+for (let i = 0; i < menuItems.length; i++) {
+  let menu = menuItems[i];
 
-  item.addEventListener("click", addToCart);
+  menu.addEventListener("click", addToCart);
 
   function addToCart() {
-    // console.log("works");
-    this.classList.toggle("bg-success");
+    let cartItem = this;
 
-    if (item.classList.contains("bg-success")) {
-      console.log(cart.innerHTML);
-    } else {
-      console.log("works");
-    }
+    let item = document.createElement("div");
+
+    cart
+      .appendChild(item)
+      .appendChild(cartItem.querySelector("img").cloneNode(true));
+
+    item.appendChild(cartItem.querySelector("div").cloneNode(true));
+
+    item.classList.add(
+      "d-flex",
+      "align-items-center",
+
+      "border-bottom",
+      "border-primary"
+    );
+    item
+      .querySelector("div")
+      .classList.add("d-flex", "justify-content-between", "w-100");
   }
 }

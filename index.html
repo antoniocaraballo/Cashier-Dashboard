@@ -9,15 +9,19 @@
   </head>
   <body class="bg-light">
     <!-- Main Content -->
-    <div class="container my-4 d-flex">
+    <div class="container my-4 d-flex flex-column flex-lg-row">
       <!-- Choose Order -->
-      <div class="col-8">
+      <div class="col-lg-8 col-12">
         <h2 class="fw-light mb-5">
           <span class="fw-semibold">Choose</span> Order
         </h2>
         <!-- Items -->
-        <div class="d-flex gap-2 flex-wrap justify-content-start">
+        <div
+          id="menu"
+          class="d-flex gap-2 flex-wrap justify-content-lg-start justify-content-center"
+        >
           <div
+            id="single-burger"
             class="item width-280 d-flex align-items-center p-4 rounded-4 box-shadow hover"
           >
             <img
@@ -141,12 +145,12 @@
       </div>
       <!-- Cart -->
       <div
-        id="cart"
-        class="col-3 rounded-4 bg-white p-4 position-relative d-flex ms-auto"
+        class="mt-5 mt-lg-0 col-12 col-lg-4 rounded-4 bg-white p-4 position-relative d-flex flex-column ms-auto"
       >
         <h2 class="fw-light mb-5">
           <span class="fw-semibold">Your</span> Order
         </h2>
+        <div id="cart"></div>
         <div
           class="ms-2 col-10 d-flex justify-content-between bottom-0 my-4 position-absolute"
         >
