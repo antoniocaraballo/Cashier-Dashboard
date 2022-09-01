@@ -36,7 +36,7 @@
             />
             <div class="ms-3">
               <p class="fs-5 fw-semibold lh-1 mb-2">Single Burger</p>
-              <p class="lh-1 mb-0" value="2.99">$2.99</p>
+              <input class="lh-1 mb-0" value="2.99" type="hidden">$2.99</input>
             </div>
           </div>
           <div
@@ -51,7 +51,7 @@
             />
             <div class="ms-3">
               <p class="fs-5 fw-semibold lh-1 mb-2">Double Burger</p>
-              <p class="lh-1 mb-0" value="3.99">$3.99</p>
+              <input class="lh-1 mb-0" value="3.99" type="hidden">$3.99</input>
             </div>
           </div>
           <div
@@ -66,7 +66,7 @@
             />
             <div class="ms-3">
               <p class="fs-5 fw-semibold lh-1 mb-2">Bacon Burger</p>
-              <p class="lh-1 mb-0" value="4.99">$4.99</p>
+              <input class="lh-1 mb-0" value="4.99" type="hidden">$4.99</input>
             </div>
           </div>
           <div
@@ -81,7 +81,7 @@
             />
             <div class="ms-3">
               <p class="fs-5 fw-semibold lh-1 mb-2">BBQ Burger</p>
-              <p class="lh-1 mb-0" value="4.99">$4.99</p>
+              <input class="lh-1 mb-0" value="4.99" type="hidden">$4.99</input>
             </div>
           </div>
           <div
@@ -96,7 +96,7 @@
             />
             <div class="ms-3">
               <p class="fs-5 fw-semibold lh-1 mb-2">Nuggets</p>
-              <p class="lh-1 mb-0" value="4.99">$4.99</p>
+              <input class="lh-1 mb-0" value="4.99" type="hidden">$4.99</input>
             </div>
           </div>
           <div
@@ -111,7 +111,7 @@
             />
             <div class="ms-3">
               <p class="fs-5 fw-semibold lh-1 mb-2">Wrap</p>
-              <p class="lh-1 mb-0" value="5.99">$5.99</p>
+              <input class="lh-1 mb-0" value="5.99" type="hidden">$5.99</input>
             </div>
           </div>
           <div
@@ -126,7 +126,7 @@
             />
             <div class="ms-3">
               <p class="fs-5 fw-semibold lh-1 mb-2">Taco</p>
-              <p class="lh-1 mb-0" value="2.99">$2.99</p>
+              <input class="lh-1 mb-0" value="2.99" type="hidden">$2.99</input>
             </div>
           </div>
           <div
@@ -141,7 +141,7 @@
             />
             <div class="ms-3">
               <p class="fs-5 fw-semibold lh-1 mb-2">Salad</p>
-              <p class="lh-1 mb-0" value="6.99">$6.99</p>
+              <input class="lh-1 mb-0" value="6.99" type="hidden">$6.99</input>
             </div>
           </div>
         </div>
@@ -162,7 +162,13 @@
     </div>
     <!-- Pay Button -->
     <div class="container d-flex justify-content-end mb-4">
-      <button class="btn btn-lg btn-success col-lg-4 col-12">Pay</button>
+      <button
+        value="0"
+        id="pay-btn"
+        class="btn btn-lg btn-success col-lg-4 col-12"
+      >
+        Pay
+      </button>
     </div>
   </body>
   <script src="./app.js"></script>

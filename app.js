@@ -41,3 +41,15 @@ for (let i = 0; i < menuItems.length; i++) {
 function removeFromCart() {
   this.parentNode.remove();
 }
+
+let payBtn = document.querySelector("#pay-btn");
+
+payBtn.addEventListener("click", pay);
+
+function pay() {
+  if (payBtn.value == 0) {
+    alert("Cart is empty");
+  } else {
+    console.log("works");
+  }
+}
