@@ -11,6 +11,7 @@ for (let i = 0; i < menuItems.length; i++) {
     let cartItem = this;
 
     let item = document.createElement("div");
+    let removeItem = document.createElement("i");
 
     cart
       .appendChild(item)
@@ -18,15 +19,25 @@ for (let i = 0; i < menuItems.length; i++) {
 
     item.appendChild(cartItem.querySelector("div").cloneNode(true));
 
-    item.classList.add(
-      "d-flex",
-      "align-items-center",
-
-      "border-bottom",
-      "border-primary"
-    );
+    item.classList.add("d-flex", "align-items-center", "border-bottom");
     item
       .querySelector("div")
-      .classList.add("d-flex", "justify-content-between", "w-100");
+      .classList.add(
+        "d-flex",
+        "justify-content-between",
+        "w-100",
+        "align-items-center"
+      );
+
+    item.appendChild(removeItem);
+    item
+      .querySelector("i")
+      .classList.add("bi", "bi-x-square-fill", "ms-3", "text-danger");
+
+    item.querySelector("i").addEventListener("click", removeFromCart);
   }
+}
+
+function removeFromCart() {
+  this.parentNode.remove();
 }
