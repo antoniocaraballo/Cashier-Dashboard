@@ -1,6 +1,6 @@
 let menuItems = document.querySelectorAll(".item");
-
 let cart = document.querySelector("#cart");
+let payBtn = document.querySelector("#pay-btn");
 
 for (let i = 0; i < menuItems.length; i++) {
   let menu = menuItems[i];
@@ -35,14 +35,21 @@ for (let i = 0; i < menuItems.length; i++) {
       .classList.add("bi", "bi-x-square-fill", "ms-3", "text-danger");
 
     item.querySelector("i").addEventListener("click", removeFromCart);
+
+    // Total in works***
+
+    // console.log(this.querySelector("input").value);
+
+    // let total = document.createElement("div");
+
+    // payBtn.appendChild(total);
+    // total.innerHTML = this.querySelector("input").value;
   }
 }
 
 function removeFromCart() {
   this.parentNode.remove();
 }
-
-let payBtn = document.querySelector("#pay-btn");
 
 payBtn.addEventListener("click", pay);
 
