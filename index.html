@@ -156,18 +156,17 @@
         <div id="cart"></div>
         <div class="ms-2 d-flex justify-content-between my-4">
           <p>Total</p>
-          <p>0.00</p>
+          <input value="0" hidden>0.00</input>
         </div>
       </div>
     </div>
     <!-- Pay Button -->
     <div class="container d-flex justify-content-end mb-4">
       <button
-        value="0"
         id="pay-btn"
         class="btn btn-lg btn-success col-lg-4 col-12 d-flex justify-content-center"
       >
-        Pay
+        Pay <div class="pay-btn-total ms-2"><input value="0" hidden></div> 
       </button>
     </div>
   </body>

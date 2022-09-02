@@ -1,6 +1,8 @@
 let menuItems = document.querySelectorAll(".item");
 let cart = document.querySelector("#cart");
 let payBtn = document.querySelector("#pay-btn");
+let payTotal = payBtn.querySelector("input").value;
+let payBtnTotal = document.querySelector(".pay-btn-total");
 
 for (let i = 0; i < menuItems.length; i++) {
   let menu = menuItems[i];
@@ -36,19 +38,14 @@ for (let i = 0; i < menuItems.length; i++) {
 
     item.querySelector("i").addEventListener("click", removeFromCart);
 
-    // Total in works***
-
-    // console.log(this.querySelector("input").value);
-
-    // let total = document.createElement("div");
-
-    // payBtn.appendChild(total);
-    // total.innerHTML = this.querySelector("input").value;
+    getTotal();
   }
 }
 
 function removeFromCart() {
   this.parentNode.remove();
+
+  getTotal();
 }
 
 payBtn.addEventListener("click", pay);
@@ -59,4 +56,19 @@ function pay() {
   } else {
     console.log("works");
   }
+}
+
+function getTotal() {
+  let arr = cart.querySelectorAll("input");
+  let total = 0;
+
+  for (let i = 0; i < arr.length; i++) {
+    if (parseFloat(arr[i].value)) {
+      total += parseFloat(arr[i].value);
+    }
+  }
+
+  payTotal = total.toFixed(2);
+
+  payBtnTotal.innerHTML = payTotal;
 }
