@@ -1,8 +1,8 @@
 let menuItems = document.querySelectorAll(".item");
 let cart = document.querySelector("#cart");
 let payBtn = document.querySelector("#pay-btn");
-let payTotal = payBtn.querySelector("input").value;
 let payBtnTotal = document.querySelector(".pay-btn-total");
+let cartTotal = document.querySelector(".cart-total");
 
 for (let i = 0; i < menuItems.length; i++) {
   let menu = menuItems[i];
@@ -50,14 +50,6 @@ function removeFromCart() {
 
 payBtn.addEventListener("click", pay);
 
-function pay() {
-  if (payBtn.value == 0) {
-    alert("Cart is empty");
-  } else {
-    console.log("works");
-  }
-}
-
 function getTotal() {
   let arr = cart.querySelectorAll("input");
   let total = 0;
@@ -68,7 +60,22 @@ function getTotal() {
     }
   }
 
+  let payTotal;
+
   payTotal = total.toFixed(2);
 
   payBtnTotal.innerHTML = payTotal;
+
+  cartTotal.innerHTML = payTotal;
+}
+
+function pay() {
+  if (payBtnTotal.innerHTML == (0).toFixed(2)) {
+    alert("Your cart is empty!");
+  } else {
+    alert("Thanks for your payment!");
+
+    cart.innerHTML = "";
+    getTotal();
+  }
 }
